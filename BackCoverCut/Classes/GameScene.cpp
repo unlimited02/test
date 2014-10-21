@@ -9,7 +9,7 @@
 
 #include <random>
 
-// 刃の移動量（Y方向）
+// 刃の移動量（y方向）
 #define DROP_Y 360
 
 // ベーススコア設定
