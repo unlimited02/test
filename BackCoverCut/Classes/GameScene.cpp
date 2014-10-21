@@ -140,7 +140,8 @@ void Game::setBackGround()
 void Game::setButton()
 {
     // リスタートボタン
-    MenuItem *reStartImage = MenuItemImage::create("reStartbtn_result.png","reStartbtn._push.png",CC_CALLBACK_0(Game::reStart, this));
+    MenuItem *reStartImage = MenuItemImage::create("reStartbtn_result.png",
+                                                   "reStartbtn._push.png",CC_CALLBACK_0(Game::reStart, this));
     
     reStartImage->setPosition(Vec2(WINSIZE.width/1.3,WINSIZE.height/9));
     
@@ -166,7 +167,8 @@ void Game::setBorder()
     float border = position.x - (size.width / setLine);
     
     DrawNode *draw = DrawNode::create();
-    draw->drawSegment(Vec2(border, position.y + size.height/2), Vec2(border, position.y - size.height/2), 2.0f, Color4F(.5f, 1.0f, .01f, 10.0f));
+    draw->drawSegment(Vec2(border, position.y + size.height/2),
+                      Vec2(border, position.y - size.height/2), 2.0f, Color4F(.5f, 1.0f, .01f, 10.0f));
     
     this->addChild(draw, Z_Label);
 

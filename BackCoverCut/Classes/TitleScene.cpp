@@ -60,7 +60,8 @@ void Title::setBackGround()
 void Title::setButton()
 {
     // 開始ボタンの配置
-    MenuItem *startItem = MenuItemImage::create("startbtn_result.png", "startbtn_push.png", CC_CALLBACK_0(Title::menuStart, this));
+    MenuItem *startItem = MenuItemImage::create("startbtn_result.png",
+                                                "startbtn_push.png", CC_CALLBACK_0(Title::menuStart, this));
     startItem->setPosition(Vec2(WINSIZE.width/2, WINSIZE.height/3));
     
     Menu *menu1 = Menu::create(startItem, NULL);
@@ -73,8 +74,10 @@ void Title::setButton()
     this->addChild(startLabel, Z_Label);
     
     // 終了ボタンの配置
-    MenuItem *closeItem = MenuItemImage::create("endbtn_result.png", "endbtn_push.png", CC_CALLBACK_1(Title::menuEnd, this));
-    closeItem->setPosition(Vec2(WINSIZE.width/2, WINSIZE.height/3 - WINSIZE.height/10 - WINSIZE.height/10));
+    MenuItem *closeItem = MenuItemImage::create("endbtn_result.png",
+                                                "endbtn_push.png", CC_CALLBACK_1(Title::menuEnd, this));
+    closeItem->setPosition(Vec2(WINSIZE.width/2,
+                                WINSIZE.height/3 - WINSIZE.height/10 - WINSIZE.height/10));
     
     Menu *menu2 = Menu::create(closeItem, NULL);
     menu2->setPosition(Vec2::ZERO);
@@ -86,8 +89,10 @@ void Title::setButton()
     this->addChild(endLabel, Z_Label);
     
     // 画像変更ボタンの配置
-    MenuItem *configItem = MenuItemImage::create("endbtn_result.png", "endbtn_push.png", CC_CALLBACK_0(Title::menuConfig, this));
-    configItem->setPosition(Vec2(WINSIZE.width/2, WINSIZE.height/3 - WINSIZE.height/10));
+    MenuItem *configItem = MenuItemImage::create("endbtn_result.png",
+                                                 "endbtn_push.png", CC_CALLBACK_0(Title::menuConfig, this));
+    configItem->setPosition(Vec2(WINSIZE.width/2,
+                                 WINSIZE.height/3 - WINSIZE.height/10));
     
     Menu *menu3 = Menu::create(configItem, NULL);
     menu3->setPosition(Vec2::ZERO);

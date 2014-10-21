@@ -67,8 +67,10 @@ void resultText::initSetBackGround()
 void resultText::initSetButton()
 {
     // 画像の変更画面
-    MenuItem *configItem = MenuItemImage::create("reStartbtn_result.png", "reStartbtn._push.png", CC_CALLBACK_0(resultText::spriteConfig, this));
-    configItem->setPosition(Vec2(WINSIZE.width/2 - WINSIZE.width/4, WINSIZE.height/9));
+    MenuItem *configItem = MenuItemImage::create("reStartbtn_result.png",
+                                                 "reStartbtn._push.png", CC_CALLBACK_0(resultText::spriteConfig, this));
+    configItem->setPosition(Vec2(WINSIZE.width/2 - WINSIZE.width/4,
+                                 WINSIZE.height/9));
     
     Menu *menu1 = Menu::create(configItem, NULL);
     menu1->setPosition(Vec2::ZERO);
@@ -80,7 +82,8 @@ void resultText::initSetButton()
     addChild(configLabel, Z_Label);
     
     // リスタートボタン
-    MenuItem *reStartItem = MenuItemImage::create("reStartbtn_result.png", "reStartbtn._push.png", CC_CALLBACK_0(resultText::reStart,  this));
+    MenuItem *reStartItem = MenuItemImage::create("reStartbtn_result.png",
+                                                  "reStartbtn._push.png", CC_CALLBACK_0(resultText::reStart,  this));
     reStartItem->setPosition(Vec2(WINSIZE.width/2, WINSIZE.height/9));
     
     Menu *menu2 = Menu::create(reStartItem, NULL);
@@ -93,8 +96,10 @@ void resultText::initSetButton()
     addChild(reStartLabel, Z_Label);
     
     // 終了ボタン
-    MenuItem *closeItem = MenuItemImage::create("endbtn_result.png", "endbtn_push.png", CC_CALLBACK_1(resultText::gameEnd, this));
-    closeItem->setPosition(Vec2(WINSIZE.width/2 + WINSIZE.width/4, WINSIZE.height/9));
+    MenuItem *closeItem = MenuItemImage::create("endbtn_result.png",
+                                                "endbtn_push.png", CC_CALLBACK_1(resultText::gameEnd, this));
+    closeItem->setPosition(Vec2(WINSIZE.width/2 + WINSIZE.width/4,
+                                WINSIZE.height/9));
     
     Menu *menu3 = Menu::create(closeItem, NULL);
     menu3->setPosition(Vec2::ZERO);
