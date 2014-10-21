@@ -249,7 +249,7 @@ FiniteTimeAction *Game::action5(float setBorder)
 // タッチ時動作
 bool Game::onTouchBegan(cocos2d::Touch *touch, cocos2d::Event *unused_event)
 {
-    log("タッチ");
+    log("タップ");
     tapCount++;
 
     getChildByTag(T_Blade)->stopAllActions();
@@ -273,7 +273,7 @@ bool Game::onTouchBegan(cocos2d::Touch *touch, cocos2d::Event *unused_event)
 
 void Game::onTouchEnded(cocos2d::Touch *touch, cocos2d::Event *unused_event)
 {
-    log("タッチ終了");
+    log("タップ終了");
 }
 
 // 刃の移動先座標を算出する
