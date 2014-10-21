@@ -13,7 +13,7 @@
 #define DROP_Y 360
 
 // ベーススコア設定
-#define BASESCORE_1 20000
+#define BASESCORE_1 20500
 #define BASESCORE_2 15000
 #define BASESCORE_3 5000
 #define BASESCORE_4 2000

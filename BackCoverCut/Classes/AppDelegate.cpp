@@ -22,9 +22,9 @@ bool AppDelegate::applicationDidFinishLaunching()
         director->setOpenGLView(glview);
     }
     
-    // 初期表示画像
+    // 最初の画像
     UserDefault *userDef = UserDefault::getInstance();
-    userDef->setStringForKey("SpriteName", "本");
+    userDef->setStringForKey("SpriteName", "にんじん");
     
     // turn on display FPS
     director->setDisplayStats(true);
