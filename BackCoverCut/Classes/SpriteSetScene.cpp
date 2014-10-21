@@ -209,23 +209,23 @@ void SetSprite::setScoreLabel()
     
     Label *scoreRank1 = Label::createWithSystemFont("", "Arial", 40, Size(getChildByTag(T_Frame2)->getContentSize().width/2,
                                                                           getChildByTag(T_Frame2)->getContentSize().height/4), TextHAlignment::LEFT);
-    scoreRank1->setPosition(getChildByTag(T_Frame2)->getPosition().x, getChildByTag(T_Frame2)->getPosition().y + 40);
-    this->addChild(scoreRank1, Z_Label, T_Rank1);
+    scoreRank1->setPosition(getChildByTag(T_Frame2)->getPosition().x,
+                            getChildByTag(T_Frame2)->getPosition().y + 40);
     
+    this->addChild(scoreRank1, Z_Label, T_Rank1);
     scoreRank1->setString(StringUtils::format("RANK1:%d点",userDef->getIntegerForKey("Score1")));
     
     Label *scoreRank2 = Label::createWithSystemFont("", "Arial", 40, Size(getChildByTag(T_Frame2)->getContentSize().width/2,
                                                                           getChildByTag(T_Frame2)->getContentSize().height/4), TextHAlignment::LEFT);
     scoreRank2->setPosition(getChildByTag(T_Frame2)->getPosition());
     this->addChild(scoreRank2, Z_Label, T_Rank2);
-    
     scoreRank2->setString(StringUtils::format("RANK2:%d点",userDef->getIntegerForKey("Score2")));
     
     Label *scoreRank3 = Label::createWithSystemFont("", "Arial", 40, Size(getChildByTag(T_Frame2)->getContentSize().width/2,
                                                                           getChildByTag(T_Frame2)->getContentSize().height/4), TextHAlignment::LEFT);
-    scoreRank3->setPosition(getChildByTag(T_Frame2)->getPosition().x, getChildByTag(T_Frame2)->getPosition().y - 40);
+    scoreRank3->setPosition(getChildByTag(T_Frame2)->getPosition().x,
+                            getChildByTag(T_Frame2)->getPosition().y - 40);
     this->addChild(scoreRank3, Z_Label, T_Rank3);
-    
     scoreRank3->setString(StringUtils::format("RANK3:%d点",userDef->getIntegerForKey("Score3")));
     log("スコアラベル配置");
 }
