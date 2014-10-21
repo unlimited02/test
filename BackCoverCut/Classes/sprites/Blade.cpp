@@ -1,5 +1,5 @@
-#define DEFAULT_BLADE_POS_X 550
-#define DEFAULT_BLADE_POS_Y 500
+#define DEFAULT_BLADEPOS_X 550
+#define DEFAULT_BLADEPOS_Y 500
 
 #include "Blade.h"
 
@@ -27,7 +27,7 @@ bool BladeSprite::init()
 
 void BladeSprite::setSprite()
 {
-    this->setPosition(Vec2(DEFAULT_BLADE_POS_X, DEFAULT_BLADE_POS_Y));
+    this->setPosition(Vec2(DEFAULT_BLADEPOS_X, DEFAULT_BLADEPOS_Y));
     this->setScale(0.3);
     this->setScaleY(0.2);
     this->setRotation(70);
