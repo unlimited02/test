@@ -81,9 +81,11 @@ void Description::setButton()
     log("ボタン配置");
     
     // スキップボタン
-    MenuItem *skipImage = MenuItemImage::create("skipBtn_default.png","skipBtn_push.png",CC_CALLBACK_0(Description::gameStart, this));
+    MenuItem *skipImage = MenuItemImage::create("skipBtn_default.png",
+                                                "skipBtn_push.png",CC_CALLBACK_0(Description::gameStart, this));
     
-    skipImage->setPosition(Vec2(WINSIZE.width/2 - WINSIZE.width/3, WINSIZE.height/2 + WINSIZE.height/3));
+    skipImage->setPosition(Vec2(WINSIZE.width/2 - WINSIZE.width/3,
+                                WINSIZE.height/2 + WINSIZE.height/3));
     
     Menu *menu1 = Menu::create(skipImage,NULL);
     menu1->setPosition(Vec2::ZERO);
@@ -100,7 +102,8 @@ void Description::setLabel()
 {
     log("ラベル配置");
     Label *helpLabel = Label::createWithSystemFont("画面を触ると刃が動くよ！\n目印にあわせて\nタイミングよく止めよう!!", "ArialRoundedMTBold", 30);
-    helpLabel->setPosition(Vec2(WINSIZE.width/2 - WINSIZE.width/4, WINSIZE.height/2 - WINSIZE.height/4));
+    helpLabel->setPosition(Vec2(WINSIZE.width/2 - WINSIZE.width/4,
+                                WINSIZE.height/2 - WINSIZE.height/4));
     helpLabel->setColor(Color3B(190, 0, 120));
     this->addChild(helpLabel, Z_Label);
 }
